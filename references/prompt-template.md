@@ -29,19 +29,23 @@
 经过多轮测试验证，精简版 prompt 效果更好——过长的 prompt 会导致内容偏差。以下为经过验证的成功模板结构：
 
 ```text
-Colored pencil hand-drawn illustration, picture book style. **A square image (1024x1024) with a HORIZONTAL LETTERBOX composition.** The top 224 pixels and the bottom 224 pixels are PURE WHITE (#FFFFFF) — completely empty, no content at all. The illustration ONLY exists in the middle 576-pixel-high horizontal band. **This middle band should be FULL and RICH with content — use ALL of this 1024x576 space!**
+Colored pencil hand-drawn illustration. Picture book style. **CRITICAL — CONTENT QUALITY FIRST: Character appearance, line clarity, color saturation, element definition, and text legibility are the highest priority. Every detail in the parameters below must be followed precisely.**
+
+**A square image (1024x1024) with a HORIZONTAL LETTERBOX composition.** The top 224 pixels and the bottom 224 pixels are pure white (#FFFFFF) — completely empty, no content at all. The illustration ONLY exists in the middle 576-pixel-high horizontal band.
 
 Character: 泡泡(Bubble), refined Japanese chibi, **2.5 heads tall**. **Dark brown cool SHORT hair** (NOT long/wavy! NOT shoulder-length! clean stylish SHORT bob, length to chin/ear, side-swept bangs, volume, layered). **Round-frame glasses with clear lenses** (always wearing — signature!). Warm bright smile. Huge round eyes (half face) with sparkle highlights and long lashes. Round cheeks, pink blush. Wearing: ivory white shirt + camel khaki wide-leg pants + white sneakers. NO backpack.
 
 SCENE: {具体场景描述，泡泡在哪里、在做什么、动作姿态}
 
-Elements: {关键视觉元素，用英文列出}. **Fill the entire middle band with rich content: character on one side, diagram/concept/mindmap on the other side, handwritten Chinese labels, arrows, decorative elements. Don't leave large empty spaces!**
+Elements: {关键视觉元素，用英文列出}. Handwritten Chinese labels, arrows, decorative elements.
 
-Colors: Lake blue #6DA4BA outlines with visible colored pencil texture (NOT digital vector, NOT soft airbrush). Hair #5D4037. Skin #FFE0BD. Pants #C9A86C. Shirt #FFF8E7. Arrow #E8D478. Circle #E8AC98. Leaf #88B880. Background pure white #FFFFFF.
+Colors: Lake blue #6DA4BA outlines with visible colored pencil texture (NOT digital vector, NOT soft airbrush). Hair #5D4037. Skin #FFE0BD. Pants #C9A86C. Shirt #FFF8E7. Arrow #E8D478. Circle #E8AC98. Leaf #88B880.
 
-Line quality: **Lines should be clear and legible, with enough definition to read easily, but still light, airy, and natural — like gentle but confident colored pencil marks. NOT thick heavy lines. NOT dark or black. CRITICAL COMPOSITION RULE — LETTERBOX:** The top and bottom 224px of this square image are pure white empty letterbox bars. All content is inside the middle 576px band only.
+Line quality: **Lines should be clear and legible, with enough definition to read easily — like confident colored pencil marks on paper. NOT thick heavy lines. NOT dark or black. NOT faint or washed-out.**
 
-50%+ empty white space overall (within the middle band). Only {3-5} text labels max. No title.
+**COMPOSITION — LETTERBOX:** The top and bottom 224px of this square image are pure white empty letterbox bars. All content is inside the middle 576px band only. Plenty of clean white space around the content. Only {3-5} text labels max. No title.
+
+**BACKGROUND: Keep the background as generated — do NOT force pure white. Natural paper tones, subtle textures, or scene-appropriate backgrounds are acceptable as long as content clarity is maintained.**
 ```
 
 **变量说明：**
@@ -54,7 +58,7 @@ Line quality: **Lines should be clear and legible, with enough definition to rea
 - 用英文大写强调否定约束，如：`Bubble is placing a rectangular BRICK on the ground. The bricks form a PATH — NOT stairs, NOT steps. Just flat bricks laid on the ground.`
 - 明确泡泡的位置（left/right/center）和姿态（kneeling/squatting/standing/sitting）
 - 明确物体的空间关系
-- **⚠️ 16:9 Letterbox 安全区约束（核心构图规则）**：使用 "HORIZONTAL LETTERBOX composition" 描述方式——明确要求正方形画布的顶部 224px 和底部 224px 完全纯白空白（#FFFFFF），所有内容只在中间 576px 横向区域内生成。不要在上下留白区域放置任何元素。中间区域必须充分利用——角色 + 图表/概念图 + 中文标注 + 箭头 + 装饰元素，铺满整个 1024×576 的空间。
+- **⚠️ 16:9 Letterbox 安全区约束（核心构图规则）**：使用 "HORIZONTAL LETTERBOX composition" 描述方式——明确要求正方形画布的顶部 224px 和底部 224px 完全空白，所有内容只在中间 576px 横向区域内生成。不要在上下留白区域放置任何元素。中间区域必须充分利用——角色 + 图表/概念图 + 中文标注 + 箭头 + 装饰元素，铺满整个 1024×576 的空间。
 
 ---
 
@@ -66,7 +70,7 @@ Line quality: **Lines should be clear and legible, with enough definition to rea
 Generate one standalone 16:9 horizontal Chinese article illustration.
 
 Visual DNA:
-Pure white background (#FFFFFF). **Colored pencil hand-drawn illustration style** with high-saturation outlines — all lines are crisp, vivid, and clearly visible like real colored pencil strokes on white paper. Picture book / children's book illustration aesthetic. Lake blue (#6DA4BA) line art for all outlines. **Characters have BRIGHT WARM FILL COLORS inside the outlines** — this is NOT a bare line sketch! Lots of empty white space. Sparse handwritten Chinese annotations in cream yellow (#E8D478) for flow paths, shell pink (#E8AC98) for key highlights, and mint green (#88B880) for supplementary notes. Clean warm healing feeling — like a colorful chibi character illustration drawn with colored pencils. The overall look should be vivid, luminous, and warm with **clear visible pencil stroke texture**. No gradients, no shadows, no paper texture (pure white bg), no complex background, no commercial vector style.
+**Colored pencil hand-drawn illustration style** with high-saturation outlines — all lines are crisp, vivid, and clearly visible like real colored pencil strokes on paper. Picture book / children's book illustration aesthetic. Lake blue (#6DA4BA) line art for all outlines. **Characters have BRIGHT WARM FILL COLORS inside the outlines** — this is NOT a bare line sketch! Sparse handwritten Chinese annotations in cream yellow (#E8D478) for flow paths, shell pink (#E8AC98) for key highlights, and mint green (#88B880) for supplementary notes. Clean warm healing feeling — like a colorful chibi character illustration drawn with colored pencils. The overall look should be vivid, luminous, and warm with **clear visible pencil stroke texture**. No gradients, no complex background, no commercial vector style. Background: keep as generated — natural tones and textures are acceptable.
 
 Recurring IP character (match reference sheet AND real photos exactly):
 泡泡 (Bubble) — a **2.5-heads-tall** chibi Q-version character with BRIGHT WARM FILL COLORS. CRITICAL UNIQUE FEATURES: **dark brown cool SHORT hair** (NOT long/wavy! clean stylish short bob with side-swept bangs, volume to chin/ear, layered — match the reference sheet's three-view exactly) — filled with `#5D4037` dark warm brown; round-oval face (slightly elongated like the real person) with soft cheeks filled with warm skin tone `#FFE0BD`; very large round eyes (1/3+ of face) with dark brown pupils, highlight dots, and **warm bright smile**; tiny nose; small mouth; **round-frame glasses with CLEAR LENSES** (always wearing — this is her signature identifier!); small rounded chibi body. Standard outfit: loose white/ivory shirt `#FFF8E7` with rolled-up sleeves + warm khaki wide-leg pants `#C9A86C` + white canvas shoes. NO backpack. Lake blue `#6DA4BA` outlines everything with **high-saturation colored-pencil texture**. Bubble looks like a vivid colorful chibi character drawn with colored pencils, not a digital vector or soft airbrush style.
@@ -94,39 +98,25 @@ Color use:
 Lake blue (#6DA4BA) for ALL line art outlines (character, objects, structures) — **lines must be high-saturation, crisp, and clearly visible with colored pencil texture**. Bubble's fill colors: hair #5D4037 dark warm brown (cool short bob style, NOT long/wavy), skin #FFE0BD warm tone, shirt #FFF8E7 ivory white, pants #C9A86C warm khaki. Cream yellow (#E8D478) for main flow/path/arrows. Shell pink (#E8AC98) only for key highlights, warnings, or results. Mint green (#88B880) only for secondary notes. The illustration should feel VIVID, WARM, and LUMINOUS with **colored pencil hand-drawn texture and clear visible outlines** — like a colorful chibi comic drawn with real colored pencils on white paper. Do NOT use pure black for lines.
 
 Constraints:
-One image explains only one core structure. Keep the main subject around 40%-60% of the canvas. **CRITICAL COMPOSITION — LETTERBOX LAYOUT:** This is a 1024x1024 square image with HORIZONTAL LETTERBOX composition. The top 224 pixels and bottom 224 pixels are PURE WHITE #FFFFFF — completely empty, no content at all. All illustration content exists ONLY in the middle 576-pixel-high horizontal band, and this band must be FULL and RICH with content (character + diagram/flowchart + Chinese labels + arrows + decorative elements). Use the entire middle band space! Preserve at least 35% blank white space within the middle band. Use at most 5-8 short handwritten Chinese labels. Do not write a title in the top-left corner. Do not write the structure type on the image. Do not make it a formal diagram, course slide, or dense explainer. Do not copy prior examples or reuse known case compositions unless explicitly requested; invent a fresh visual metaphor for this specific article. It should be clear but not instructional, warm but not childish, artsy but not pretentious. Bubble must be the active participant, not decoration. **Bubble's appearance: cool short dark brown hair (NEVER long/wavy — match reference sheet three-view!), round-frame glasses with clear lenses (ALWAYS wearing — signature feature!), warm bright smile.** Pure white background — no tint, no cream, no blue-grey.
+One image explains only one core structure. Keep the main subject around 40%-60% of the canvas. **CRITICAL COMPOSITION — LETTERBOX LAYOUT:** This is a 1024x1024 square image with HORIZONTAL LETTERBOX composition. The top 224 pixels and bottom 224 pixels are PURE WHITE #FFFFFF — completely empty, no content at all. All illustration content exists ONLY in the middle 576-pixel-high horizontal band, and this band must be FULL and RICH with content (character + diagram/flowchart + Chinese labels + arrows + decorative elements). Use the entire middle band space! Preserve at least 35% blank white space within the middle band. Use at most 5-8 short handwritten Chinese labels. Do not write a title in the top-left corner. Do not write the structure type on the image. Do not make it a formal diagram, course slide, or dense explainer. Do not copy prior examples or reuse known case compositions unless explicitly requested; invent a fresh visual metaphor for this specific article. It should be clear but not instructional, warm but not childish, artsy but not pretentious. Bubble must be the active participant, not decoration. **Bubble's appearance: cool short dark brown hair (NEVER long/wavy — match reference sheet three-view!), round-frame glasses with clear lenses (ALWAYS wearing — signature feature!), warm bright smile.**
 **Line quality: Lines should be clear and legible with enough definition to read easily, but still light, airy, and natural — like gentle but confident colored pencil marks. NOT thick heavy lines. NOT dark or black.**
 ```
 
 ---
 
-## 后处理（两步：先裁剪 16:9，再智能刷白背景）
+## 后处理（仅一步：裁剪为 16:9）
 
-**⚠️ 最终输出比例必须严格为 16:9 横版。**
+**⚠️ 最终输出比例必须严格为 16:9 横版。不对背景做任何处理——保留生成原样。**
 
-ImageGen 仅支持 1024x1024 正方形输出，因此每次生图后需要两步后处理：
-
-### 第1步：裁剪为 16:9
+ImageGen 仅支持 1024x1024 正方形输出，因此每次生图后只需裁剪：
 
 ```bash
-python3.11 scripts/crop_16_9.py <原始生成图> <裁剪后中间图>
+python3.11 scripts/crop_16_9.py <原始生成图> <最终输出图>
 ```
 
 裁剪脚本从正方形图片的中心区域裁剪为 16:9 横版（1024x576），移除上下各 224px 的 letterbox 留白区域。
 
-### 第2步：智能刷白背景
-
-```bash
-python3.11 scripts/smart_whiten_bg.py <裁剪后中间图> <最终输出图> 30 28 150
-```
-
-智能刷白脚本使用 Color Key + Uniform Gray 双重检测算法清除残留灰色背景。默认参数 `30 28 150`（距离阈值/均匀灰偏差/最小亮度）。
-
-**完整示例：**
-```bash
-python3.11 scripts/crop_16_9.py raw_output.png cropped.png
-python3.11 scripts/smart_whiten_bg.py cropped.png final_output.png 30 28 150
-```
+**背景不做处理，保持生成时的自然状态。** 内容质量（人物形象、线条清晰度、色彩饱和度、元素完整性、文字可读性）是唯一的质量标准。
 
 ---
 
